@@ -6,13 +6,10 @@ use solana_program::{
     program_error::ProgramError,
     pubkey::Pubkey
 };
-
 use std::convert::TryInto;
 use std::mem::size_of;
-
 #[cfg(feature = "fuzz")]
-use arbitrary::Arbitrary;
-
+use arbitrary::Arbitrary;                                                                                                                                                                           
 #[cfg(feature = "fuzz")]
 impl Arbitrary for VestingInstruction {
     fn arbitrary(u: &mut arbitrary::Unstructured<'_>) -> arbitrary::Result<Self> {
